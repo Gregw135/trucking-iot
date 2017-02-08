@@ -24,9 +24,9 @@ hash mvn 2>/dev/null || {
   cat > /etc/profile.d/maven.sh <<- EndOfMessage
   export M2_HOME=/opt/apache-maven-3.3.9
   export PATH=${M2_HOME}/bin:${PATH}
-  EndOfMessage
+EndOfMessage
   source /etc/profile.d/maven.sh
 }
 
 # Create necessary Kafka topics
-/usr/hdf/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper sandbox.hortonworks.com:2181 --replication-factor 1 --partition 1 --topic trucking.data.truckandtraffic
+/usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper sandbox.hortonworks.com:2181 --replication-factor 1 --partition 1 --topic trucking.data.truckandtraffic
